@@ -106,7 +106,17 @@ def current_player(board)
   turn_count(board).even? ? "X" : "O"
 end
 
-
+def play(board)
+  until over?
+    turn(board)
+  end
+  if won?
+    winner(board) == "X" || winner(board) == "O"
+    puts "Congratulations #{winner(board)}!"
+  elsif draw(board)
+    puts "Cats Game!"
+  end
+end
 
 
 
