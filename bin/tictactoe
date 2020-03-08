@@ -9,5 +9,5 @@ display_board(board)
 
 def play(board)
   until won? = true
-  
+  turn(board)
 end
