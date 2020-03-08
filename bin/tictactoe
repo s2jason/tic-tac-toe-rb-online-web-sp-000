@@ -9,7 +9,10 @@ display_board(board)
 
 def play(board)
   until over?
-  turn(board)
+    turn(board)
+  end
+  if won?
+    puts "Congratulations Winner!"
   
   won? = true
   turn(board)
